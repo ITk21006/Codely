@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>C++ Page 3</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/aa405a5c76.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Navigacijas linija ar divam pogam pa kreisi-->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-clipboard"></i> Coding
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Cpp.html">C++</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">SQL</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Viena poga pa labi -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+  <div class="container">
+    <h1>C++ Variables</h1>
+    <p>Next on the list - variables.</p>
+    <p>Variables are a sort of container for a data value, and those value <b>types</b> can be a number, a single word or a string of text or even a true/false statement.</p>
+    <p>For each <b>variable type</b> there is a different <code>keyword:</code></p>
+    <ul>
+      <li><code>int</code> - stores <b>integers</b> or <b>whole numbers</b> <i>(111 or -111)</i></li>
+      <li><code>double</code> - stores <b>floating point numbers</b> <i>(1,23 or -12,3)</i></li>
+      <li><code>char</code> - stores <b>a single charater</b> like 'X' or 'a' (single quotes needed)</li>
+      <li><code>string</code> - stores <b>a line of text</b> like "Hello world!" (double quotes needed)</li>
+      <li><code>bool</code> - true or false value</li>
+    </ul>
+    <p>To create a variable, all you need to do is specify what type it is and what's it's value, as well as give it a name or <b>identifier</b> - </p>
+    <br>
+    <p><i>type variableName = value;</i></p>
+  
+    <br>
+    <p>Lets test it out!</p>
+    <div class="row">
+      <!-- Lauks prieks kodesanas uzdevuma-->
+      <div class="col-md-5">
+        <pre>
+          <code>
+            #include &lt;iostream&gt;
+            using namespace std;
+
+            int main() {
+            <input type="text" id="answer1" required size="6"></input> <input type="text" id="answer2" required size="4"></input> = "<input type="text" id="answer3" required size="6"></input>";
+            <input type="text" id="answer4" required size="3"></input> <input type="text" id="answer5" required size="3"></input> = <input type="text" id="answer6" required size="2"></input>;
+            <input type="text" id="answer7" required size="4"></input> <input type="text" id="answer8" required size="6"></input> = '<input type="text" id="answer9" required size="1"></input>';
+
+            return 0;
+            }
+          </code>
+          <p id="sourceinfo">Information provided by <a herf="w3schools.com">w3schools.com</a></p>
+        </pre>
+      </div>
+      <div class="col-md-6">
+        <p>John, a twenty five year old male, needs to enter his <code>name</code>, <code>age</code> and <code>gender</code> in the code in that order, but doesn't know how to.</p>
+        <p>Enter the variable types, their names and values, writing the age in numbers and gender with a single captial letter.</p>
+        <p>(Keep the variable types and their names in lowercase, but the person's name and gender in uppercase, and exclude the quotes where they're needed)</p>
+        <form onsubmit="checkAnswer2(event)">
+
+          <br>
+          <button class="animated-button" type="submit">Check code</button>
+        </form>
+        <br>
+        <br>
+        <div id="result"></div>
+        <div id="unlockButton2" style="display: none;">
+          <br>
+          <a href="Cpp-p4.html">
+            <button id="Page4">Go to next page</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+
+  <script>
+   function checkAnswer2(event) {
+    event.preventDefault();
+  const answer1 = document.getElementById("answer1").value;
+  const answer2 = document.getElementById("answer2").value;
+  const answer3 = document.getElementById("answer3").value;
+  const answer4 = document.getElementById("answer4").value;
+  const answer5 = document.getElementById("answer5").value;
+  const answer6 = document.getElementById("answer6").value;
+  const answer7 = document.getElementById("answer7").value;
+  const answer8 = document.getElementById("answer8").value;
+  const answer9 = document.getElementById("answer9").value;
+
+  if (answer1 !== "string") {
+    alert("Error in line 1, answer 1 - Enter the correct variable for a line of text");
+    return false;
+  }
+
+  if (answer2 !== "name") {
+    alert("Error in line 1, answer 2 - Enter the correct variable name");
+    return false;
+  }
+
+  if (answer3 !== "John") {
+    alert("Error in line 1, answer 3 - Enter the person's name correctly");
+    return false;
+  }
+
+  if (answer4.trim() !== "int") {
+    alert("Error in line 2, answer 1 - Enter the correct variable type for a whole number");
+    return false;
+  }
+
+  if (answer5 !== "age") {
+    alert("Error in line 2, answer 2 - Enter the correct variable name");
+    return false;
+  }
+
+  if (answer6 !== "25") {
+    alert("Error in line 2, answer 3 - Enter the correct person's age");
+    return false;
+  }
+
+  if (answer7 !== "char") {
+    alert("Error in line 3, answer 1 - Enter the correct variable type for a single charater");
+    return false;
+  }
+
+  if (answer8 !== "gender") {
+    alert("Error in line 3, answer 2 - Enter the correct vairable name");
+    return false;
+  }
+
+  if (answer9 !== "M") {
+    alert("Error in line 3, answer 3 - Enter the correct person's gender");
+    return false;
+  }
+
+  // All inputs are valid
+  document.getElementById('result').innerHTML = '<div class="correct">Everything is correct!</div>';
+	document.getElementById('unlockButton2').style.display = "block";
+  return true;
+  
+}
+  </script>
+  
+  
+  </body>
+</html>
