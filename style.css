@@ -104,3 +104,38 @@ body {
   }
 }
 
+.congratulations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6em;
+}
+
+.end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+
+.end2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.last {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.last-btn {
+  font-size: 50px;
+  padding: 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
