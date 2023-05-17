@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>C++ Page 2</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/aa405a5c76.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Navigacijas linija ar divam pogam pa kreisi-->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-clipboard"></i> Coding
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Cpp.html">C++</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">SQL</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Viena poga pa labi -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- C++ programmesanas apmacibas sakums, ar stilizetu tekstu prieks skaidribas par ko tiek runats -->
+      <h1>Getting started with C++</h1>
+      <p>Let's start with the most basic task in programming: "Hello world!"</p>
+      <p>"Hello, world!" is the simplest program to show how the language works. It is usually the first thing new programmers write because it displays how a language is structured.</p>
+      <p>Also from now on you will be given a snippet of code, your task is to complete the code with the missing line, but before that, lets break down the code:</p>
+      <ul>
+        <li><code>#include &lt;iostream&gt;</code> is a <i><b>header file library</b></i> that lets us work with input and output objects, such as <code>cout</code>. Header files add functionality to C++ programs.</li>
+        <li><code>using namespace std</code> means that we can use names for objects and variables from the standard library.</li>
+      </ul>
+      <p>It's fine you don't understand these two, that is just almost always used for the code to work.</p>
+      <ul>
+        <li><code>int main()</code> is a <i><b>function</b></i>, any code inside its curly brackets <code>{}</code> will be executed.</li>
+        <li><code>cout</code> (pronounced "see-out") is an <i><b>object</b></i> used together with the <i>insertion operator</i> <code><<</code> to output text, for example, <code>cout << "This is a test";</code> would return <code>This is a test</code> text in the console. In this activity the output will be "Hello World!"</li>
+        <li><code>return 0</code> ends the main function.</li>
+      </ul>
+      <p>And remember, in C++, <b>every line ends with a semicolon (<code>;</code>)!</b></p>
+      <p>To write and compile your own C++ you'll need a compiler, like <a href="https://www.onlinegdb.com/">OnlineGDB,</a> which has over 30 languages available, but for now we'll use pre-written code, all you have to do is finish it!</p>
+      <div class="row">
+        <!-- Lauks prieks kodesanas uzdevuma-->
+        <div class="col-md-5">
+          <pre>
+            <code>
+              #include &lt;iostream&gt;
+              using namespace std;
+              
+              int main() {
+                <input type="text" id="answer" required size="25"></input>
+                  return 0;
+              }
+              
+            </code>
+            <p id="sourceinfo">Information provided by <a herf="w3schools.com">w3schools.com</a></p>
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <p>Fill in the missing code to print <b>"Hello world!"</b> to the console:</p>
+          <form onsubmit="checkAnswer1(event)">
+            <br>
+            <button class="animated-button" type="submit">Check code</button>
+          </form>
+          <br>
+          <br>
+          <div id="result"></div>
+          <div id="unlockButton" style="display: none;">
+            <br>
+            <a href="Cpp-p3.html">
+              <button id="Page3">Go to next page <i class="fas fa-arrow-right"></i></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- skripts, kas parbauda, vai ievadita atbilde ir pareiza vai ne -->
+<script>
+function checkAnswer1(event) {
+	event.preventDefault(); // prevent form submission
+		const answer = document.getElementById('answer').value.trim();
+        
+		if (answer === 'cout << "Hello world!";') {
+			document.getElementById('result').innerHTML = '<div class="correct">Correct!</div>';
+			document.getElementById('unlockButton').style.display = "block";
+            //Parada pogu uz nakamo lapu, ja atbilde ir pareiza 
+            } else if (answer === 'cout<<"Hello world!";') {
+			document.getElementById('result').innerHTML = '<div class="correct">Correct!</div>';
+			document.getElementById('unlockButton').style.display = "block"; 
+			} else if (answer === 'cout << "Hello world!"') {
+			document.getElementById('result').innerHTML = '<div class="missing">Something is missing...</div>';
+            document.getElementById('answer').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer').classList.remove('shake');
+            }, 250);
+            //Teksta ievades lauku pakrata, ja atbilde ir nepareiza
+            } else if (answer === 'cout<<"Hello world!"') {
+			document.getElementById('result').innerHTML = '<div class="missing">Something is missing...</div>';
+            document.getElementById('answer').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer').classList.remove('shake');
+            }, 250);
+			} else {
+			document.getElementById('result').innerHTML = '<div class="incorrect">Incorrect. Please try again.</div>';
+            document.getElementById('answer').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer').classList.remove('shake');
+            }, 250);
+		}
+	}
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>C++ Page 5</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/aa405a5c76.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Navigacijas linija ar divam pogam pa kreisi-->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-clipboard"></i> Coding
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Cpp.html">C++</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">SQL</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Viena poga pa labi -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+        <h1>C++ Loops</h1>
+        <p>Loops can execute a block of code as long as a condition has been reached. Loops are useful because they help save time, reduce erros and make code more readable.</p>
+        <p>There are two types of loops - <code>for</code> loops and <code>while</code> loops.</p>
+        <p><code>While</code> loops go thought a block of code as long as a condition is <code>true</code>.</p>
+        <p><code>For</code> loops are used when you know exactly how many imes you want to go thought a block of text.</p>
+        <p>You can also place a loop inside a loop, making a <b>nested loop.</b></p>
+        <div class="col-md-4">
+            <pre>
+
+        while (condition) {
+        // code block to be executed
+        }
+              </pre>
+        </div>
+        <div class="col-md-5">
+            <pre>
+
+        for (statement 1; statement 2; statement 3) {
+        // code block to be executed
+         }
+            </pre>
+        </div>
+        <div class="col-md-7">
+            In this exercise, finish the loops so that they complete the following: <br>
+            <ul>
+                <li>Print <b>"test"</b> as long as <code>i</code> is less than 10;</li>
+                <li>Print <b>"best"</b> 10 times;</li>
+            </ul> 
+        </div>
+        <div class="col-md-6">
+            <pre>
+              <code>
+               int i = 1;
+               <input type="text" id="answer1" required size="5"></input> (i < 10) {
+                    cout << "test" << "\n";
+                    i++;
+               }
+                  
+
+
+                <input type="text" id="answer2" required size="5"></input> (int i = 0; i <= 10; i++) {
+                    cout << "best" << "\n";
+                }
+
+              </code>
+              <p id="sourceinfo">Information provided by <a herf="w3schools.com">w3schools.com</a></p>
+            </pre>
+
+    </div>
+
+    <div class="col-md-3">
+        <form onsubmit="checkAnswer4(event)">
+            <br>
+            <button class="animated-button" type="submit">Check code</button>
+          </form>
+          <br>
+          <div id="result"></div>
+
+          <div id="unlockButton" style="display: none;">
+            <br>
+            <a href="Cpp-p6.html">
+              <button id="Page6">Go to next page <i class="fas fa-arrow-right"></i></button>
+            </a>
+          </div>
+
+    </div>
+
+
+    <script>
+        function checkAnswer4(event) {
+            event.preventDefault();
+            const answer1 = document.getElementById("answer1").value;
+            const answer2 = document.getElementById("answer2").value;
+            if (answer1 !== 'while' || answer2 !== 'for') {
+            document.getElementById('result').innerHTML = '<div class="incorrect">Incorrect. Please try again.</div>';
+            document.getElementById('answer1').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer1').classList.remove('shake');
+            }, 250);
+            document.getElementById('answer2').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer2').classList.remove('shake');
+            }, 250);
+                    return false;
+                }
+
+            document.getElementById('result').innerHTML = '<div class="correct">Correct!</div>';
+            document.getElementById('unlockButton').style.display = "block";
+        }
+    </script>
+
+    </body>
+</html>

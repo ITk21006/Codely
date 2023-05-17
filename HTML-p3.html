@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HTML Page 3</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/aa405a5c76.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+<body>
+  <!-- Navigacijas linija ar divam pogam pa kreisi-->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-clipboard"></i> Coding
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="Cpp.html">C++</a></li>
+              <li><a href="HTML.html">HTML</a></li>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">SQL</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Viena poga pa labi -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="contact.html">Contact <i class="fas fa-circle-user"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container">
+    <h1>HTML Attributes</h1>
+    <p>All HTML elements can have attributes that provide extra information about it. There are many ways to add an attribute:</p>
+        <ul>
+            <li>The <span style="color:red"><</span><span style="color:red">a></span> tag specifies text as a hyperlink, a shortcut to another site, and the <code>href</code> attribute specifies the destination of it.<br>
+                Example: <span style="color:blue"><</span><span style="color:brown">a</span><span style="color:red"> href</span><span style="color:blue">="https://www.google.com/"></span>Visit Google.com<span style="color:blue"><</span><span style="color:brown">/a</span><span style="color:blue">></span> - Output - <a href="https://www.google.com/" target="_blank">Visit Google.com</a></li>
+            <li>The <span style="color:red"><</span><span style="color:red">img></span> tag is used to add an image to a page, and the <code>src</code> attribute specifies where the image file is located, and the <code>alt</code> attribute follows it to specify an alternate text for the image if, for some reason, the image cannot be displayed or when you hover the mouse over the image. There should also be <code>width</code> and <code>height</code> attributes that specify the size of the image in pixels.<br>
+                Example: <span style="color:blue"><</span><span style="color:brown">img</span><span style="color:red"> src</span><span style="color:blue">="img_cat.png"</span><span style="color:red"> alt</span><span style="color:blue">="My Cat"></span></li>
+            <li>The <code>style</code> attribute is used to add style to an element, it being a color, font, size and more.<br>
+                Example: <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:red"> style</span><span style="color:blue">="color:blue;"></span>This text is blue<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span> - Output - <span style="color: blue">This text is blue</span></li>
+            <li>The <code>title</code> attribute defines some extra information about an element when you hover your mouse over it.<br>
+                Example: <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:red"> title</span><span style="color:blue">="This is a tooltip"></span>This text has a tooltip (hover over it!)<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span> - Output - <span title="This is a title"><b>This text has a tooltip (hover over it!)</b></span></li>
+            <li>The <code>lang</code> attribute can be added to the <span style="color:red"><</span><span style="color:red">html></span> tag to declare the language of the page.<br>
+                Example: <span style="color:blue"><</span><span style="color:brown">html</span><span style="color:red"> lang</span><span style="color:blue">="en"></span></li>
+        </ul> 
+    <p>There are also more important attributes later on, like <code>class</code> or <code>id</code> that give certain elemetns unique identificators, mostly used for styling. <code>class</code> attributes can be used by multiple elements, but <code>id</code> can be used only by one within a page.</p>
+<br>
+    <div class="col-md-5">
+        <pre>
+
+            <span style="color:blue"><</span><span style="color:brown">!DOCTYPE html</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">html</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">head</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">title</span><span style="color:blue">></span> Title <span style="color:blue"><</span><span style="color:brown">/title</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">/head</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">body</span><span style="color:blue">></span>
+
+            <span style="color:blue"><</span><span style="color:brown">img</span><span style="color:red"> src</span><span style="color:blue">="</span><input type="text" id="answer1" required size="15"></input><span style="color:blue">"</span><span style="color:red"> alt</span><span style="color:blue">="Car"></span>
+            <span style="color:blue"><</span><span style="color:brown">p </span><input type="text" id="answer2" required size="20"></input><span style="color:blue">></span>This is my red car<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>
+
+
+            <span style="color:blue"><</span><span style="color:brown">/body</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">/html</span><span style="color:blue">></span>
+          <p id="sourceinfo">Information provided by <a herf="w3schools.com">w3schools.com</a></p></pre>
+      </div>
+      <div class="col-md-6">
+        <p>Finish the code so that it displays an image of a <b>red car</b> and the text under it is <b>red.</b></p>
+        <p>Available files:</p>
+        <ul>
+          <li>red_car.html</li>
+          <li>read_car.pdf</li>
+          <li>car_blue.png</li>
+          <li>car_red.png</li>
+          <li>car_racing.exe</li>
+        </ul>
+        <form onsubmit="checkAnswer2(event)">
+          <br>
+          <button class="animated-button" type="submit">Check code</button>
+        </form>
+        <br>
+        <div id="result"></div>
+        <div id="unlockButton" style="display: none;">
+          <br>
+          <a href="HTML-p4.html">
+            <button id="Page4">Go to next page <i class="fas fa-arrow-right"></i></button>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script>
+      function checkAnswer2(event) {
+          event.preventDefault();
+          const answer1 = document.getElementById("answer1").value;
+          const answer2 = document.getElementById("answer2").value;
+          if (answer1 !== 'car_red.png') {
+          document.getElementById('result').innerHTML = '<div class="incorrect">Wrong image file name</div>';
+          document.getElementById('answer1').classList.add('shake');
+          setTimeout(function() {
+              document.getElementById('answer1').classList.remove('shake');
+          }, 250);
+                  return false;
+              }
+
+          if (answer2 !== 'style="color:red;"') {
+          document.getElementById('result').innerHTML = '<div class="incorrect">Style is wrong</div>';
+          document.getElementById('answer2').classList.add('shake');
+          setTimeout(function() {
+              document.getElementById('answer2').classList.remove('shake');
+          }, 250);
+                  return false;
+              }
+
+          document.getElementById('result').innerHTML = '<div class="correct">Correct!</div>';
+          document.getElementById('unlockButton').style.display = "block";
+            }
+    </script>
+</body>
+</html>

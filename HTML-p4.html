@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HTML Page 4</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/aa405a5c76.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+<body>
+  <!-- Navigacijas linija ar divam pogam pa kreisi-->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-clipboard"></i> Coding
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="Cpp.html">C++</a></li>
+              <li><a href="HTML.html">HTML</a></li>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">SQL</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Viena poga pa labi -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="contact.html">Contact <i class="fas fa-circle-user"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container">
+    <h1>HTML Text Formatting</h1>
+    <p>Apart from using <code>style</code> to change how the text looks, you can add formatting tags within the text itself to quickly add some <del>style</del> spark!</p>
+    <p>For text formatting we can use:</p>
+    <ul>
+        <li><span style="color:red"><</span><span style="color:red">b></span> and <span style="color:red"><</span><span style="color:red">strong></span > tags to make the text <b>bold</b>;</li>
+        <li><span style="color:red"><</span><span style="color:red">i></span> tag to make the text <i>italic</i>;</li>
+        <li><span style="color:red"><</span><span style="color:red">em></span> tag to <em>emphasize</em> the text;</li>
+        <li><span style="color:red"><</span><span style="color:red">mark></span> tag to <mark>mark</mark> the text;</li>
+        <li><span style="color:red"><</span><span style="color:red">small></span> tag to make the text <small>smaller</small>;</li>
+        <li><span style="color:red"><</span><span style="color:red">del></span> tag to make the text look <del>deleted</del>;</li>
+        <li><span style="color:red"><</span><span style="color:red">ins></span> tag for <ins>inserted</ins> text;</li>
+        <li><span style="color:red"><</span><span style="color:red">sup></span> tag for <sup>superscript</sup> text;</li>
+        <li><span style="color:red"><</span><span style="color:red">sub></span> tag for <sub>subscript</sub> text.</li>
+    </ul>
+    <p>And that's it! All you need to do to implement these is to put text between the start and end tags of the style, like this: <br> 
+    <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:blue">></span>This text is normal, while <span style="color:blue"><</span><span style="color:brown">b</span><span style="color:blue">></span>this text is bold<span style="color:blue"><</span><span style="color:brown">/b</span><span style="color:blue">></span><span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span> - Output - This text is normal, while <b>this text is bold</b></p>
+
+    <br>
+    <div class="col-md-7">
+        <pre>
+
+            <span style="color:blue"><</span><span style="color:brown">!DOCTYPE html</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">html</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">head</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">title</span><span style="color:blue">></span> History of HTML <span style="color:blue"><</span><span style="color:brown">/title</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">/head</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">body</span><span style="color:blue">></span>
+
+            <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:blue">></span>HTML was made by Tim Berners-Lee in <span style="color:blue"><</span><input type="text" id="answer1" required size="3"></input><span style="color:blue">></span>2014<span style="color:blue"><</span><input type="text" id="answer2" required size="4"></input><span style="color:blue">></span> <input type="text" id="answer3" required size="4"></input><span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>
+
+            <span style="color:blue"><</span><span style="color:brown">/body</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">/html</span><span style="color:blue">></span>
+          <p id="sourceinfo">Information provided by <a herf="w3schools.com">w3schools.com</a></p></pre>
+      </div>
+
+      <div class="col-md-5">
+        <p>In the code, add a tag that deletes the wrong year and input the correct one (Hint: it's 1993)</p>
+        <form onsubmit="checkAnswer3(event)">
+          <br>
+          <button class="animated-button" type="submit">Check code</button>
+        </form>
+        <br>
+        <div id="result"></div>
+        <div id="unlockButton" style="display: none;">
+          <br>
+          <a href="HTML-p5.html">
+            <button id="Page5">Go to next page <i class="fas fa-arrow-right"></i></button>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script>
+        function checkAnswer3(event) {
+            event.preventDefault();
+            const answer1 = document.getElementById("answer1").value;
+            const answer2 = document.getElementById("answer2").value;
+            const answer3 = document.getElementById("answer3").value;
+            if (answer1 !== 'del') {
+            document.getElementById('result').innerHTML = '<div class="incorrect">Wrong tag name</div>';
+            document.getElementById('answer1').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer1').classList.remove('shake');
+            }, 250);
+                    return false;
+                }
+  
+            if (answer2 !== '/del') {
+            document.getElementById('result').innerHTML = '<div class="incorrect">Wrong end tag name</div>';
+            document.getElementById('answer2').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer2').classList.remove('shake');
+            }, 250);
+                    return false;
+                }
+
+            if (answer3 !== '1993') {
+            document.getElementById('result').innerHTML = '<div class="incorrect">Wrong year</div>';
+            document.getElementById('answer3').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer3').classList.remove('shake');
+            }, 250);
+                    return false;
+                }
+  
+            document.getElementById('result').innerHTML = '<div class="correct">Correct!</div>';
+            document.getElementById('unlockButton').style.display = "block";
+              }
+      </script>
+
+</body>
+</html>

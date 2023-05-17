@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HTML Page 5</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/aa405a5c76.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        .box {
+          width: 200px;
+          height: 200px;
+          background-color: #c2bcef;
+          border: 2px solid rgb(220, 47, 47);
+          padding: 20px;
+          text-align: center;
+          font-size: 20px;
+        }
+      </style>
+
+
+  </head>
+  
+<body>
+  <!-- Navigacijas linija ar divam pogam pa kreisi-->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-clipboard"></i> Coding
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="Cpp.html">C++</a></li>
+              <li><a href="HTML.html">HTML</a></li>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">SQL</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Viena poga pa labi -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="contact.html">Contact <i class="fas fa-circle-user"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container">
+    <h1>HTML Classes and CSS</h1>
+    <p>As mentioned previously, you can add classes and IDs to tags to make styling easier. For example, if I want to style multiple boxes the same way in one page or across multiple pages, but I don't want to repeat the same code over and over again, I can just assign the <span style="color:red"><</span><span style="color:red">div></span> (a container for grouping elements) the class <span style="color:red">box</span>.</p>
+    <p>Style sheets can be in the <span style="color:blue"><</span><span style="color:brown">head</span><span style="color:blue">></span> part of the code or it can be in a <code>style.css</code> file. If we want to style an ID we need to start the style sheet with a hashtag <code>#</code>, but if it's a class, then a preiod <code>.</code> - <code>#button</code> or <code>.buttons</code>.</p>
+    <p>Remember: <b>classes can be assigned to multiple elements, ID - only to one!</b></p>
+    <div class="col-md-4">
+    <p><span style="color:blue"><</span><span style="color:brown">style</span><span style="color:blue">></span><br>
+        &emsp; <span style="color:rgb(127, 127, 35)">.box {</span><br>
+            &emsp; &emsp; <span style="color:rgb(32, 117, 154)">width</span>:<span style="color:rgb(51, 126, 71)"> 200px</span>;<br>
+            &emsp; &emsp; <span style="color:rgb(32, 117, 154)">height</span>:<span style="color:rgb(51, 126, 71)"> 200px</span>;<br>
+            &emsp; &emsp; <span style="color:rgb(32, 117, 154)">background-color</span>:<span style="color:brown"> #c2bcef</span>;<br>
+            &emsp; &emsp; <span style="color:rgb(32, 117, 154)">border</span>:<span style="color:rgb(51, 126, 71)"> 2px</span><span style="color:brown"> solid rgb(220, 47, 47)</span>;<br>
+            &emsp; &emsp; <span style="color:rgb(32, 117, 154)">padding:</span><span style="color:rgb(51, 126, 71)"> 20px</span>;<br>
+            &emsp; &emsp; <span style="color:rgb(32, 117, 154)">text-align:</span><span style="color:brown"> center</span>;<br>
+            &emsp; &emsp; <span style="color:rgb(32, 117, 154)">font size:</span><span style="color:rgb(51, 126, 71)"> 20px</span>;<br>
+        &emsp; <span style="color:rgb(127, 127, 35)">}</span><br>
+        <span style="color:blue"><</span><span style="color:brown">/style</span><span style="color:blue">></span><br>
+        <br>
+        <span style="color:blue"><</span><span style="color:brown">div</span><span style="color:rgb(32, 117, 154)"> class</span><span style="color:brown">="box"</span><span style="color:blue">></span><br>
+        &emsp; This is a box.<br>
+        <span style="color:blue"><</span><span style="color:brown">div</span><span style="color:blue">></span>
+        <br>
+        <br>
+        Output:</p>
+    <div class="box">
+        This is a box.
+      </div>
+    </div>
+<br>
+<br>
+<p>Exercise:</p>
+      <div class="col-md-5">
+        <pre>
+
+            <span style="color:blue"><</span><span style="color:brown">!DOCTYPE html</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">html</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">head</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">style</span><span style="color:blue">></span>
+                <span style="color:rgb(127, 127, 35)">.country {</span>
+                    <span style="color:rgb(32, 117, 154)">font-weight:</span><input type="text" id="answer1" required size="6"></input>;
+                    <span style="color:rgb(32, 117, 154)">font size:</span><span style="color:rgb(51, 126, 71)"> 20px</span>;
+                <span style="color:rgb(127, 127, 35)">}</span>
+
+                <span style="color:rgb(127, 127, 35)">#city {</span>
+                    <span style="color:rgb(32, 117, 154)">font-weight:</span><input type="text" id="answer2" required size="6"></input>;
+                    <span style="color:rgb(32, 117, 154)">font size:</span><span style="color:rgb(51, 126, 71)"> 15px</span>;
+                <span style="color:rgb(127, 127, 35)">}</span>
+            <span style="color:blue"><</span><span style="color:brown">/head</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">body</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:rgb(32, 117, 154)"> class</span><span style="color:brown">="</span><input type="text" id="answer3" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>USA<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:rgb(32, 117, 154)"> class</span><span style="color:brown">="</span><input type="text" id="answer4" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>India<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:rgb(32, 117, 154)"> class</span><span style="color:brown">="</span><input type="text" id="answer5" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>New York<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>   
+            <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:rgb(32, 117, 154)"> class</span><span style="color:brown">="</span><input type="text" id="answer6" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>Brazil<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">/body</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">/html</span><span style="color:blue">></span>
+          <p id="sourceinfo">Information provided by <a herf="w3schools.com">w3schools.com</a></p></pre>
+      </div>
+
+      <div class="col-md-3">
+        <p>In the code, add a tag that deletes the wrong year and input the correct one (Hint: it's 1993)</p>
+        <form onsubmit="checkAnswer4(event)">
+          <br>
+          <button class="animated-button" type="submit">Check code</button>
+        </form>
+        <br>
+        <div id="result"></div>
+        <div id="unlockButton" style="display: none;">
+          <br>
+          <a href="HTML-p6.html">
+            <button id="Page5">Go to next page <i class="fas fa-arrow-right"></i></button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <script>
+        function checkAnswer4(event) {
+            event.preventDefault();
+            const answer1 = document.getElementById("answer1").value;
+            const answer2 = document.getElementById("answer2").value;
+            const answer3 = document.getElementById("answer3").value;
+            const answer4 = document.getElementById("answer4").value;
+            const answer5 = document.getElementById("answer5").value;
+            const answer6 = document.getElementById("answer6").value;
+            if (answer1 !== 'bold' || answer2 !== 'italic') {
+            document.getElementById('result').innerHTML = '<div class="incorrect">font-weight is wrong</div>';
+            document.getElementById('answer1').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer1').classList.remove('shake');
+            }, 250);
+            document.getElementById('answer2').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer2').classList.remove('shake');
+            }, 250);
+                    return false;
+                }
+                
+  
+            if (answer3 !== 'country' || answer4 !=='country' || answer5 !== 'city' || answer6 !== 'country') {
+            document.getElementById('result').innerHTML = '<div class="incorrect">Wrong class/id distribution</div>';
+            document.getElementById('answer3').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer3').classList.remove('shake');
+            }, 250);
+            document.getElementById('answer4').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer4').classList.remove('shake');
+            }, 250);
+            document.getElementById('answer5').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer5').classList.remove('shake');
+            }, 250);
+            document.getElementById('answer6').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer6').classList.remove('shake');
+            }, 250);
+                    return false;
+                }
+  
+            document.getElementById('result').innerHTML = '<div class="correct">Correct!</div>';
+            document.getElementById('unlockButton').style.display = "block";
+              }
+      </script>
+
+    </body>
+    </html>
