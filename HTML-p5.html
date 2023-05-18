@@ -43,8 +43,8 @@
             <ul class="dropdown-menu">
               <li><a href="Cpp.html">C++</a></li>
               <li><a href="HTML.html">HTML</a></li>
-              <li><a href="soon.html">Python</a></li>
-              <li><a href="soon.html">SQL</a></li>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">SQL</a></li>
             </ul>
           </li>
         </ul>
@@ -104,17 +104,17 @@
                 <span style="color:rgb(127, 127, 35)">}</span>
             <span style="color:blue"><</span><span style="color:brown">/head</span><span style="color:blue">></span>
             <span style="color:blue"><</span><span style="color:brown">body</span><span style="color:blue">></span>
-            <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:rgb(32, 117, 154)"> class</span><span style="color:brown">="</span><input type="text" id="answer3" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>USA<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>
-            <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:rgb(32, 117, 154)"> class</span><span style="color:brown">="</span><input type="text" id="answer4" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>India<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>
-            <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:rgb(32, 117, 154)"> class</span><span style="color:brown">="</span><input type="text" id="answer5" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>New York<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>   
-            <span style="color:blue"><</span><span style="color:brown">p</span><span style="color:rgb(32, 117, 154)"> class</span><span style="color:brown">="</span><input type="text" id="answer6" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>Brazil<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">p </span><input type="text" id="answer7" required size="5"></input><span style="color:brown">="</span><input type="text" id="answer3" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>USA<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">p </span><input type="text" id="answer8" required size="5"></input><span style="color:brown">="</span><input type="text" id="answer4" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>India<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>
+            <span style="color:blue"><</span><span style="color:brown">p </span><input type="text" id="answer9" required size="5"></input><span style="color:brown">="</span><input type="text" id="answer5" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>New York<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>   
+            <span style="color:blue"><</span><span style="color:brown">p </span><input type="text" id="answer10" required size="5"></input><span style="color:brown">="</span><input type="text" id="answer6" required size="8"></input><span style="color:brown">"</span><span style="color:blue">></span>Brazil<span style="color:blue"><</span><span style="color:brown">/p</span><span style="color:blue">></span>
             <span style="color:blue"><</span><span style="color:brown">/body</span><span style="color:blue">></span>
             <span style="color:blue"><</span><span style="color:brown">/html</span><span style="color:blue">></span>
           <p id="sourceinfo">Information provided by <a herf="w3schools.com">w3schools.com</a></p></pre>
       </div>
 
       <div class="col-md-3">
-        <p>In the code, add a tag that deletes the wrong year and input the correct one (Hint: it's 1993)</p>
+        <p>In the code, make it so that city names are in <i>italic</i> and country names are in <b>bold</b>, and after that distribute the classes and id so that they are displayed correctly</p>
         <form onsubmit="checkAnswer4(event)">
           <br>
           <button class="animated-button" type="submit">Check code</button>
@@ -141,6 +141,10 @@
             const answer4 = document.getElementById("answer4").value;
             const answer5 = document.getElementById("answer5").value;
             const answer6 = document.getElementById("answer6").value;
+            const answer7 = document.getElementById("answer7").value;
+            const answer8 = document.getElementById("answer8").value;
+            const answer9 = document.getElementById("answer9").value;
+            const answer10 = document.getElementById("answer10").value;
             if (answer1 !== 'bold' || answer2 !== 'italic') {
             document.getElementById('result').innerHTML = '<div class="incorrect">font-weight is wrong</div>';
             document.getElementById('answer1').classList.add('shake');
@@ -153,10 +157,31 @@
             }, 250);
                     return false;
                 }
+
+                if (answer7 !== 'class' || answer8 !=='class' || answer9 !== 'id' || answer10 !== 'class') {
+            document.getElementById('result').innerHTML = '<div class="incorrect">Wrong class/id distribution</div>';
+            document.getElementById('answer7').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer7').classList.remove('shake');
+            }, 250);
+            document.getElementById('answer8').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer8').classList.remove('shake');
+            }, 250);
+            document.getElementById('answer9').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer9').classList.remove('shake');
+            }, 250);
+            document.getElementById('answer10').classList.add('shake');
+            setTimeout(function() {
+                document.getElementById('answer10').classList.remove('shake');
+            }, 250);
+                    return false;
+                }
                 
   
             if (answer3 !== 'country' || answer4 !=='country' || answer5 !== 'city' || answer6 !== 'country') {
-            document.getElementById('result').innerHTML = '<div class="incorrect">Wrong class/id distribution</div>';
+            document.getElementById('result').innerHTML = '<div class="incorrect">Wrong class/id name distribution</div>';
             document.getElementById('answer3').classList.add('shake');
             setTimeout(function() {
                 document.getElementById('answer3').classList.remove('shake');
